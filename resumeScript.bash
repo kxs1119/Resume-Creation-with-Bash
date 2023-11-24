@@ -4,6 +4,7 @@
 echo " Hello! Welcome to Resume Creation!"
 
 
+
 # Creating an intro 
 echo "What is your name?" 
 read name
@@ -14,12 +15,15 @@ read emailAddress
 echo "What is your phone number?"
 read phoneNumber
 
+size=3
+skillSize=6
+
 # Creating the education section
 echo "What school did you attend? : "
 read schoolAttended    # school variable
 
 # Creating the bullet points with no more than 3 bullet points 
-for ((i=0; i<3; i=i++))
+for ((i=0; i<$size; i=i++))
 do
     echo "List a skill: "
     read schoolBulletPoint
@@ -27,12 +31,12 @@ do
 fi
 
 # Creating the Work History Section 
-echo "Where have you worked"
+echo "Where have you worked? " 
 read experience
 
 # Creating the bullet points with no more than 3 bullet points
 echo "List bullet point indicating your experience: "
-for ((i=0; i<3; i=i++))
+for ((i=0; i<$size; i=i++))
 do
     
     read experienceBulletin
@@ -41,7 +45,7 @@ fi
 
 # Creating Skills Section
 echo "List bullet point indicating your skillsett: "
-for ((i=0; i<=6; i=i++))
+for ((i=0; i<=$skillSize; i=i++))
 do
    read skills
 
@@ -51,7 +55,7 @@ fi
 echo "Where have you volunteered"
 
 echo "List bullet point indicating your volunteer work:  "
-for ((i=0; i<=3; i=i++))
+for ((i=0; i<=$size; i=i++))
 do
    read volunteerWork
 
