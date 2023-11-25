@@ -1,4 +1,4 @@
-# resumeProject
+# Resume Creation with Bash!
 
 ## Description
 This script will be used to automate resume creation. The script will prompt the user to enter data, format the data, and export the .pdf file
