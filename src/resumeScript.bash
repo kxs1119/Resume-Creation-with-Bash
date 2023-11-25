@@ -110,3 +110,4 @@ read nameofJob
 echo -e "$resume" | pandoc -o /home/rocky/cpsc207/resumeBuilder
 # Convert the resume to PDF and export 
 echo -e "$resume" | pandoc -o "$nameofJob.pdf"
+
