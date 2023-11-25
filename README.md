@@ -25,16 +25,16 @@ This script will be used to automate resume creation. The script will prompt the
                 - needs bolded line underneath to seperate
         - Skills
             - Technical Skills
-                * seperated with bullet (.) instead of commas (,)
+                * seperated with bullet (.) instead of commas (,) 👍🏾
             - Soft Skills 
-                 * seperated with bullet (.) instead of commas (,)
+                 * seperated with bullet (.) instead of commas (,) 👍🏾
             - Programming Languages or Tools 
-                 * seperated with bullet (.) instead of commas (,)
+                 * seperated with bullet (.) instead of commas (,) 👍🏾
 
         - Relevent Experience
-            - Company
-            -Job Title 
-            - 2 or 3 bullet points
+            - Company 👍🏾
+            -Job Title 👍🏾
+            - 2 or 3 bullet points 👍🏾
 
 
 ## Future Additions 
