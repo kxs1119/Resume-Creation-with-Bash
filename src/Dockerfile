@@ -1,18 +1,17 @@
-# Stage 1: Building from the "appdynamics/sample-app-rest" image
-FROM appdynamics/sample-app-rest as builder
+# Setting up docker for transport to others
+# Creating image from mac enviorment
+FROM appdynamics/sample-app-rest AS builder
 WORKDIR /resumeProject
 COPY . .
 RUN ./resumeScript.bash
 
-# Stage 2: Creating image based on Ubuntu
+# Creating an image for ubuntu 
 FROM ubuntu:latest
 WORKDIR /resumeProject
 
-# Copy the script directly from the build context
+#Copy and setting permission
 COPY resumeScript.bash .
-
-# Set permissions for the script
 RUN chmod +x resumeScript.bash
 
-# Define the default command to run the script
+# Command for the script to run
 CMD ["./resumeScript.bash"]
