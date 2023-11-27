@@ -17,7 +17,7 @@ echo "What is your LinkedIn?"
 read linkedin
 
 # Combine all sections 
-header="\033[1m$name\033[0m\n\n"    # ? Need to make name bold and centered
+header="$name"    # ? Need to make name bold and centered
 header+="Contact Information:\n\n"
 header+="Email Address: $emailAddress\n|Phone: $phoneNumber\n|LinkedIn: $linkedin"
 
@@ -111,3 +111,5 @@ echo -e "$resume" | pandoc -o /home/rocky/cpsc207/resumeBuilder
 # Convert the resume to PDF and export 
 echo -e "$resume" | pandoc -o "$nameofJob.pdf"
 
+# Instead of converting to a pdf, convert to a markdown file. 
+# once convert to markdown file, then convert to a pdf
