@@ -15,4 +15,4 @@ WORKDIR /resumeProject
 #Copy and setting permission
 COPY --from=builder /resumeProject/resumeScript.bash .
 # Command for the script to run
-CMD ["./resumeScript.bash"]
+CMD ["./resumeScript.bash"] 
