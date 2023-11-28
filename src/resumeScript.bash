@@ -19,7 +19,7 @@ read linkedin
 # Combine all sections
 header="# **$name**\n\n"    # ? Need to make name bold and centered
 header+="## *Contact Information:*\n"
-header+="* **Email Address**: $emailAddress\n* **Phone**: $phoneNumber\n* **LinkedIn**: $linkedin\n\n"
+header+="**Email Address**: $emailAddress|\n **Phone**: $phoneNumber|\n **LinkedIn**: $linkedin\n\n"
 
 size=3
 attempts=0
