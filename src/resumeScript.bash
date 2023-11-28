@@ -109,7 +109,7 @@ read nameofJob
 # Print/Save document
 echo -e "$resume" | pandoc -o /home/rocky/cpsc207/resumeBuilder
 # Convert the resume to PDF and export 
-echo -e "$resume" | pandoc -o "$nameofJob.pdf"
+echo -e "$resume" | pandoc -o "$nameofJob.md"
 
 # Instead of converting to a pdf, convert to a markdown file. 
 # once convert to markdown file, then convert to a pdf
