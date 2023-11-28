@@ -24,12 +24,9 @@ This script will be used to automate resume creation. The script will prompt the
                 - needs to be in Bold and header 2 format
                 - needs bolded line underneath to seperate
         - Skills
-            - Technical Skills
+            [x] Technical Skills
                 * seperated with bullet (.) instead of commas (,)
-            - Soft Skills 
-                 * seperated with bullet (.) instead of commas (,)
-            - Programming Languages or Tools 
-                 * seperated with bullet (.) instead of commas (,)
+          
 
         - Relevent Experience
             - Company
