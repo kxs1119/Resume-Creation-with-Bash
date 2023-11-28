@@ -17,20 +17,35 @@ echo "What is your LinkedIn?"
 read linkedin
 
 # Combine all sections 
-header="$name"    # ? Need to make name bold and centered
-header+="Contact Information:\n\n"
-header+="Email Address: $emailAddress\n|Phone: $phoneNumber\n|LinkedIn: $linkedin"
+header="# **$name**\n\n"    # ? Need to make name bold and centered 
+header+="------------------------------------------"
+header+="## *Contact Information:"
+header+="* **Email Address**: $emailAddress\n|* **Phone**: $phoneNumber\n|* **LinkedIn**: $linkedin"
 
 size=3
-skillSize=6
+attempts=0
+maxAttempts=3
 
 # Creating the education section
 echo "What school did you attend?"
 read schoolAttended    # school variable
 
+while [$attempts -le $maxAttempts]; do
+echo "How many skills would you like to list for school?" 
+read skillSize
+if [$school_skillSize -eq 0 || $school_skillSize -eq " "]; then
+    echo "Enter a valid amount of skills" 
+else 
+    # break if a valid # of skills
+    break
+# increment the amount of attempts
+((attempts++))
+
+done
+
 echo "List skills you've learned from school: "
 # Creating the bullet points with no more than 3 bullet points 
-for ((i=0; i<$size;i++))
+for ((i=0; i<$school_skillSize;i++))
 do
     read schoolBulletPoint
 
@@ -49,10 +64,23 @@ do
     
 done
 
+while [ $attempts -le $maxAttempts ]; do
+echo "How many skills would you like to list? " 
+read technical_skillSize
+if [$technical_skillSize -eq 0 ]||[  $technical_skillSize -eq " "]; then
+    echo "Enter a valid amount of skills: \n" 
+else 
+    # break if a valid # of skills
+    break
+# increment the amount of attempts
+((attempts++))
+
+done
+
 # Creating Skills Section
-echo "List bullet point indicating your skillset[type 'q' to quit]: "
+echo "List bullet point indicating your skillset "
 #? Need to add a test case if the user just presses a blank space
-for ((i=0; i<=$skillSize;i++))
+for ((i=0; i<=$technical_skillSize;i++))
 do
    read skills\n
 done
@@ -70,7 +98,7 @@ done
 resume="$header"
 
 # Adding eduction 
-resume+="Education:\n\n"
+resume+="### **Education**:\n\n"
 resume+="$schoolAttended\n\n"
 for ((i=0; i<$size;i++))
 do
@@ -78,7 +106,7 @@ do
 done
 
 # Adding work History
-resume+="Work Experience:\n"
+resume+="### **Work Experience**:\n"
 resume+="$experience\n"
 
 for ((i=0; i<$size;i++))
@@ -86,14 +114,14 @@ do
     resume+="$experienceBulletin\n\n"
 done
 # Adding skills
-resume+="Skills:\n\n"
+resume+="### **Technical Skills**:\n\n"
 for ((i=0; i<$size;i++))
 do
     resume+="* $skills\n\n"
 
 done
 # Adding volunteer work 
-resume+="Professional Development:\n\n"
+resume+="### **Professional Development**:\n\n"
 resume+="$volunteerLocation\n"
 for ((i=0; i<$size;i++))
 do
@@ -106,10 +134,7 @@ done
 echo "What job are you applying for?"
 read nameofJob
 
-# Print/Save document
-echo -e "$resume" | pandoc -o /home/rocky/cpsc207/resumeBuilder
-# Convert the resume to PDF and export 
-echo -e "$resume" | pandoc -o "$nameofJob.md"
-
-# Instead of converting to a pdf, convert to a markdown file. 
+# Convert the resume to markdown (.md) and export 
+echo -e "$resume" > pandoc -o "/home/rocky/cpsc207/resume/$nameofJob.md" 
 # once convert to markdown file, then convert to a pdf
+pandoc -s "/home/rocky/cpsc207/resume/markdown/$nameofJob.md" -o "/home/rocky/cpsc207/resume/$nameofJob.pdf" 
