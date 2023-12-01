@@ -19,7 +19,7 @@ read linkedin
 # Combine all sections
 header="# **$name**\n\n"    # ? Need to make name bold and centered
 header+="## *Contact Information:*\n"
-header+="**Email Address**: $emailAddress|\n **Phone**: $phoneNumber|\n **LinkedIn**: $linkedin\n\n"
+header+="**Email Address**: $emailAddress|\n\n **Phone**: \n\n$phoneNumber|\n\n **LinkedIn**: $linkedin\n\n"
 
 size=3
 attempts=0
@@ -104,7 +104,7 @@ done
 
 # Adding work History
 resume+="### **Work Experience**:\n"
-resume+="$experience\n"
+resume+="$experience\n\n"
 for ((i=0; i<$size; i++))
 do
     resume+="* $experienceBulletin\n\n"
@@ -119,7 +119,7 @@ done
 
 # Adding volunteer work
 resume+="### **Professional Development**:\n\n"
-resume+="$volunteerLocation\n"
+resume+="$volunteerLocation\n\n"
 for ((i=0; i<$size; i++))
 do
     resume+="* $volunteerWork\n\n"
