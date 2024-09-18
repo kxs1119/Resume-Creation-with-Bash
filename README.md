@@ -1,7 +1,7 @@
 # RESUME CREATION WITH BASH
 
 ## Description
-This script will be used to automate resume creation. The script will prompt the user to enter data, format the data, and export the .pdf file
+This script will be used to automate resume creation. The script will prompt the user to enter data, format the data, and export the markdown file
 
 ## Things to do
     1. Format the script for export
